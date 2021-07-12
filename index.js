@@ -7,10 +7,10 @@ let io = require('socket.io')(server,{ cors: {
   }
 });
 
-const {Usuarios} = require ('../ChatSocket/classes/usuarios'); 
+const {Usuarios} = require ('./ChatSocket/classes/usuarios'); 
 usuarios = new Usuarios();
 
-const {Mensajes} = require ('../ChatSocket/classes/mensajes'); 
+const {Mensajes} = require ('./ChatSocket/classes/mensajes'); 
 mensajes = new Mensajes();
  
 io.on('connection', (socket) => {
